@@ -23,6 +23,7 @@ body {
   background: var(--navy);
   color: var(--white);
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 .container {
@@ -447,6 +448,75 @@ section h2 {
   .order-content h2 { text-align: center; }
 }
 
+/* ---- FURTHER READING CTA ---- */
+.further-cta {
+  background: var(--navy);
+  text-align: center;
+  padding: 72px 0;
+}
+
+/* ---- READING PAGE ---- */
+.reading {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-light) 100%);
+  min-height: 100vh;
+  padding: 96px 0 80px;
+}
+
+.reading .container { max-width: 760px; }
+
+.reading h1 {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 900;
+  color: var(--blue-light);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.reading .lead {
+  color: var(--white-dim);
+  font-size: 1.1rem;
+  margin-bottom: 48px;
+}
+
+.reading-group { margin-bottom: 48px; }
+
+.reading-group h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--blue-light);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.reading-item {
+  display: block;
+  background: var(--white-faint);
+  border-left: 4px solid var(--blue);
+  border-radius: 0 8px 8px 0;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.reading-item:hover { background: rgba(255,255,255,0.22); transform: translateY(-1px); }
+
+.reading-item .ri-title {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.reading-item .ri-meta {
+  color: var(--blue-light);
+  font-size: 0.85rem;
+}
+
+.reading-back { margin-top: 24px; }
+
 /* ---- FOOTER ---- */
 footer {
   background: var(--navy);
@@ -487,12 +557,16 @@ footer a {
   .about-inner { flex-direction: column; }
   .about-photo { flex: 0 0 auto; width: 180px; margin: 0 auto; }
   .quotes-grid { grid-template-columns: 1fr; }
+  .book-title { white-space: normal; }
 }
 
 @media (max-width: 600px) {
-  .book-title { font-size: 3.2rem; }
+  .book-title { font-size: clamp(2rem, 9vw, 3rem); white-space: normal; }
+  .subtitle { font-size: 1rem; }
   .hero-quote { padding: 16px 18px; }
+  .hero-quote-text { font-size: 1rem; }
   .order-buttons { flex-direction: column; align-items: stretch; }
   section { padding: 56px 0; }
   section h2 { font-size: 1.6rem; }
+  .btn-large { font-size: 1rem; padding: 16px 28px; }
 }
